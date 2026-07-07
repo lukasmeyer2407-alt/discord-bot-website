@@ -450,3 +450,100 @@ font-size:52px;
 }
 
 }
+/* Animationen */
+
+.hidden{
+
+    opacity:0;
+
+    transform:translateY(50px);
+
+    transition:1s;
+
+}
+
+.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+.card{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.card::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:250px;
+
+    height:250px;
+
+    background:radial-gradient(circle,#33c4ff55,transparent 70%);
+
+    left:var(--x);
+
+    top:var(--y);
+
+    transform:translate(-50%,-50%);
+
+    pointer-events:none;
+
+    opacity:0;
+
+    transition:.2s;
+
+}
+
+.card:hover::before{
+
+    opacity:1;
+
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#070b17;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#5865F2;
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#33c4ff;
+
+}
+
+/* Textauswahl */
+
+::selection{
+
+    background:#5865F2;
+
+    color:white;
+
+}
